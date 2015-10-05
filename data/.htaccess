@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# .213 Server and Siva installs
+# RewriteRule ^.*$ index.php/$0 [B,L,NC]
+
+# if the above htaccess don't work try the below htaccess works for matt,robbie  and other macs
+RewriteRule .* index.php/$0 [PT,L,NC]
